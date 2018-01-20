@@ -1,0 +1,192 @@
+/* ******************头部 *******************/
+.head-tab {
+    padding: 0px 10px;
+    text-align: center;
+    line-height: 44px;
+    background: #efeff0;
+    border: 1px solid #dddddd;
+    position: relative;
+}
+
+.head-tab i {
+    bottom: -1px;
+}
+
+.head-tab i::before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 34px;
+    margin: 0px auto;
+    background: #777;
+}
+
+.head-tab a {
+    display: block;
+    margin: 0px auto;
+    width: 2em;
+}
+
+.header-checkin {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 44px;
+    height: 44px;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAZCAMAAABuOnzZAAAAolBMVEUAAAAbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiEbGiFJgwQWAAAANXRSTlMA8OEE5qDa9BjdNrb7+OrCmJOGe6+NdGctDgjRbl1DCtXHvammUydiWE0gFREjG9fOy4FKP9g69KIAAAG1SURBVCjPhZPpspswDIUtY2zMvhMCIaxJIHty/f6vVnzpXJy2Mz1/7CO+kYQ0RlLa4X3MhgP61GW67X/MvgrbGhNqpdNKbM0s0fVwuC1ZTh7YDoAthKDJdUGMrC8w55hgTx9nPwoBxAVsRcfIAnqSWU7xo7W8mvM7JQxShN62TYgXVrksbIZWukVjdDoYxrUqe4optZ/zl5Q4nay8yBgv6Kz9NvnO4py18qqLECnKb4o5eIT18uLbiRI29eCsWB0g+IYcBcp16ucK5ANE8gyYAm39+oU+IDf7hsBXouU9VZzmAx4WSN+u4XeRqZAOtPob+ip2HxArNktZFTIff0DNdckYX5TJPI8KtO+c1pBnDN6kQB89nS1m5XIRHtTmGt7gUoEMj8VbGa2BDErjTvrT0Aw9WSc3WRGAF8o3s2R1U27S2FTHKAmCMqLQS2hg4DaJ9Sjqe9OVVy3amaHVFFiKYOrGEtoJx3WB2Qw3cde2Gco72r+iJG4o5pwTfJL5HQGuY3ulaWjoUpXGFH3t5Y+Zx9glHIseyVRcCJKe19ms7yXFLjjLcKcwMNG/NWA71ND/NGYz8wtKHyKO6y3tlgAAAABJRU5ErkJggg==");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
+}
+
+.swipe-tab {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.swipe-tab i {
+    position: absolute;
+    left: 0px;
+    transform: 0.3 ease-out;
+    -webkit-transform: -webkit-transform .3s ease-out;
+}
+
+.swipe-tab a {
+    float: left;
+    text-align: center;
+    font-size: 18px;
+    -webkit-tap-transform-color: rgba(0, 0, 0, 0);
+    font-family: '楷体';
+}
+
+.swipe-tab a.actove {
+    font-weight: 600;
+    color: #282828;
+}
+
+.swipe-tab-2 a {
+    width: 100%;
+}
+
+
+/* ******************列表*******************/
+.channel-h5 {
+    background: #fff;
+    border-bottom: 10px solid #f5f5f5;
+    position: relative;
+}
+
+.channel-h5-header {
+    padding: 10px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    font-size: 16px;
+    line-height: 16px;
+    font-family: "楷体";
+}
+
+.list-h5 {
+    padding: 0 15px;
+}
+
+.list-h5 li::after {
+    display: block;
+    content: "";
+    clear: both;
+    overflow: hidden;
+    height: 0px;
+    visibility: hidden;
+}
+
+.list-h5 li {
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.list-h5 li:last-child {
+    border: none;
+}
+
+.list-h5 {
+    overflow: hidden;
+}
+
+.book-h5-cover {
+    float: left;
+    position: relative;
+    width: 50px;
+    height: 70px;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 1px;
+    overflow: hidden;
+}
+
+.book-h5-cover img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1px;
+}
+
+.book-h5-finish {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    /* width: 50px; */
+    color: #fff;
+    padding: 5px 0px;
+    text-align: center;
+    font-family: arial;
+    font-size: 14px;
+    line-height: 14px;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3))
+}
+
+.book-h5-info {
+    margin-left: 60px;
+    padding: 5px 0px;
+    height: 60px;
+    background: #fff;
+}
+
+.book-h5-title {
+    margin-bottom: 4px;
+    font-family: arial;
+    font-size: 16px;
+    height: 25px;
+    line-height: 25px;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+
+}
+
+.book-h5-wrap {
+    margin: 10px 0px;
+    padding-top: 3px;
+    overflow: hidden;
+}
+
+.book-h5-author {
+    float: left;
+    margin: -3px 5px 0 -3px;
+    padding: 3px 5px;
+    max-width: 6em;
+    font: 15px/11px a;
+    color: #999;
+    overflow: hidden;
+
+}
+
+.book-h5-tag {
+    float: left;
+    margin: -3px 5px 0 -3px;
+    padding: 3px 5px;
+    max-width: 6em;
+    font: 15px/11px a;
+    color: #999;
+    overflow: hidden;
+}

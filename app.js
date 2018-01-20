@@ -4,43 +4,55 @@ const Router = require('koa-router')
 const path = require('path')
 const static = require('koa-static')
 
+const service = require('./service/data.js')
+
 const app = new Koa()
 const router = new Router()
 
-// 加载模板引擎
-app.use(views(path.join(__dirname, './view'), {
-  extension: 'ejs'
-}))
+//模板
+app.use(views(__dirname + '/view', {
+  extension: 'html',
+}));
 
 //静态资源
 app.use(static(
-  path.join( __dirname, './static')
+  path.join(__dirname, './static')
 ))
-
 app.use(static(
-  path.join( __dirname, './data')
+  path.join(__dirname, './data')
 ))
 
 // 路由
-router.get('/', async ( ctx )=>{
+// 主页
+router.get('/', async (ctx) => {
   await ctx.render('index')
-})
+});
 
-router.get('/show', async ( ctx )=>{
-  await ctx.render('show')
-})
+// 阅读器
+router.get('/show', async (ctx) => {
+   await ctx.render('show');
+});
 
 
-router.get('/index', async ( ctx )=>{
-    let title = 'hello index'
-    await ctx.render('index', {
-      title,
-    })
-})
+// ************任务代码************
+// 首页列表数据
+router.get('/indexShow', async (ctx) => {
+  ctx.body =  service.getAllbooklist();
+});
+
+// 首页列表数据
+router.get('/showImg', async (ctx) => {
+
+  ctx.body = service.getIistimg( ctx.query);
+});
+
+
+
 
 
 // 加载路由中间件
 app.use(router.routes()).use(router.allowedMethods())
+
 
 app.listen(8086);
 
