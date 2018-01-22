@@ -1,28 +1,33 @@
 var vm = new Vue({
     el: '#app',
     data: {
-        titlename: "端脑",
+        titlename: "",
         lists: "",
-
     },
     methods: {
         ajax: function () {
             var _this = this;
-            var id=location.href.split("?id=").pop();
+            var id = location.href.split("?id=").pop();
             // 获取列表数据
-            $.get("/showImg?id="+id, function (result) {
-                console.log(result)
-               // _this.init(result);
+            $.get("/showImg?id=" + id, function (result) {
+                var titlename = "1";
+                _this.init(titlename, result);
             });
-        },
-        init: function (res) {
-            this.lists = res.catalog.reverse();;
-        },
+            // 章节名称
+            $.get("/chapter?id=" + id, function (titlename) {
+                var result = "1";
+                _this.init(titlename, result);
+            });
 
-        jump: function (bookid) {
-            window.location.href="/show";
-
-        }
+        },
+        init: function (titlename, result) {
+            if (titlename != "1") {
+                this.titlename = titlename;
+            }
+            if (result != "1") {
+                this.lists = result;
+            }
+        },
     },
     mounted: function () {
         this.ajax();

@@ -25,12 +25,10 @@
         <!-- 菜单按钮 -->
         <div class="menu-button"></div>
         <div class="show-project-box">
-
-            <span class="show-item" >
-                <img src="Book/第1话 地狱的来信/1.jpg" />
+            <span class="show-item" v-for=" list in lists" >
+                <img :src= list  />
             </span>
         </div>
-
     </div>
 </body>
 <script src="js/vue.js"></script>

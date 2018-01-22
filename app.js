@@ -40,14 +40,15 @@ router.get('/indexShow', async (ctx) => {
   ctx.body =  service.getAllbooklist();
 });
 
-// 首页列表数据
+// 阅读器的列表数据
 router.get('/showImg', async (ctx) => {
-
-  ctx.body = service.getIistimg( ctx.query);
+  ctx.body =service.getIistimg( ctx.query);
 });
 
-
-
+// 章节名称
+router.get('/chapter', async (ctx) => {
+  ctx.body =service.chapterTilte( ctx.query);
+});
 
 
 // 加载路由中间件
