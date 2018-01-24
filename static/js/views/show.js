@@ -28,6 +28,10 @@ var vm = new Vue({
                 this.lists = result;
             }
         },
+        back:function(){
+            window.history.back();
+        }
+
     },
     mounted: function () {
         this.ajax();
