@@ -23,17 +23,39 @@
                 <em class="header-checkin"></em>
             </div>
         </div>
+
         <div>
+            <section class="record-box" v-if="seen">
+                <div class="record-box-header">浏览记录</div>
+                <ul class="record-list">
+                    <li>
+                        <div class="book-h5" :id="bookid" v-on:click="jump(bookid)">
+                            <div class="book-h5-cover">
+                                <img src="img/book/1.jpg" />
+                            </div>
+                            <div class="book-h5-info">
+                                <p class="book-h5-title"> {{ title }} </p>
+                                <div class="book-h5-wrap">
+                                    <span class="book-h5-author">有妖气</span>
+                                    <span class="book-h5-tag">科幻</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+
             <section class="channel-h5">
                 <div class="channel-h5-header">端脑列表</div>
                 <ul class="list-h5">
                     <li v-for="(v,k) in lists">
-                        <div class="book-h5" :id ="v.id"  v-on:click="jump(v.id)">
+                        <div class="book-h5" :id="v.id" v-on:click="jump(v.id)">
                             <div class="book-h5-cover">
                                 <img src="img/book/1.jpg" />
                             </div>
 
-                            <div class="book-h5-info" >
+                            <div class="book-h5-info">
                                 <p class="book-h5-title"> {{ v.name }}</p>
                                 <div class="book-h5-wrap">
                                     <span class="book-h5-author">有妖气</span>

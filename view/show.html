@@ -15,23 +15,30 @@
 <body>
     <div class="show-well" id="app">
 
-        <div class="show-header-box">
+        <div class="show-header-box" v-bind:style="{transitionDuration: duration ,top:position+'px'}">
             <div class="show-header-text f-cb">
-               {{ titlename }}
+                {{ titlename }}
             </div>
             <em class="header-return" v-on:click='back'></em>
         </div>
 
         <!-- 菜单按钮 -->
-        <div class="menu-button"></div>
+        <div class="menu-button" v-on:click='showheader'></div>
+
         <div class="show-project-box">
-            <span class="show-item" v-for=" list in lists" >
-                <img :src= list  />
+            <span class="show-item" v-for=" list in lists">
+                <img :src=list />
+            </span>
+            <span class="next-box" v-on:click='next'>
+                下一章
             </span>
         </div>
+
+
     </div>
 </body>
 <script src="js/vue.js"></script>
 <script src="js/zepto.js"></script>
 <script src="js/views/show.js"></script>
+
 </html>

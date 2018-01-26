@@ -50,10 +50,8 @@ router.get('/chapter', async (ctx) => {
   ctx.body =service.chapterTilte( ctx.query);
 });
 
-
 // 加载路由中间件
 app.use(router.routes()).use(router.allowedMethods())
-
 app.listen(8086);
 
 
