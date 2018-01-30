@@ -33,6 +33,6 @@ node
 ![截图1](https://github.com/treey-yao/DieNao/raw/master/img/demo/pics1.png)<br>
 预览2<br>
 ![截图2](/img/demo/pics1.png)<br>
-![baidu](http://www.baidu.com/img/bdlogo.gif "百度logo")
+
 
 
