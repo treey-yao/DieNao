@@ -34,5 +34,5 @@ node
 预览2<br>
 ![截图2](/img/demo/pics1.png)<br>
 
-
+[foryou]:https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 
