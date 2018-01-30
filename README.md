@@ -30,9 +30,9 @@ node
 ## 项目预览
 
 预览1<br>
-![截图1](https://github.com/treey-yao/picture/raw/master/DeiNao/demopics1.png)<br>
+![截图1](https://github.com/treey-yao/picture/raw/master/DeiNao/pics1.jpg)<br>
 预览2<br>
-![截图2](/img/demo/pics1.png)<br>
+![截图2](https://github.com/treey-yao/picture/raw/master/DeiNao/pics2.jpg)<br>
 
 [foryou]:https://github.com/treey-yao/DieNao/raw/master/img/demo/pics1.png
 
